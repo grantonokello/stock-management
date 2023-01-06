@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block body %}
+
+{{ super() }}
+<div id="sell" class="container">
+    <div class="card">
+        <div class="class-head">
+           <center><legend>SELLING POINT</legend></center>
+        </div>
+        <div class="card-body">
+            <form action="#" method="post">
+                <div class="mb-3">
+                <label for="item" class="form-label">Item</label>
+                <input name="Item" type="text" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                <label for="amount">Amount</label>
+                <input name="amount" type="number" class="form-control" equired>
+                </div class="mb-3">
+                <div class="mb-3">
+                <label for="number" class="form-label">Number</label>
+                <input name="number" type="number" class="form-control" equired>
+                </div>
+                <div class="mb-3">
+                    <label for="sellingPrice" class="form-label">Selling Price</label>
+                <input name="sellingPrice" type="number" class="form-control" equired>
+                </div>
+                <div class="mb-3">
+                 <center><button type="submit" class="btn btn-success sm">Recond</button></center>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+<style>
+    #sell{
+    display:flex;
+    justify-content: center;
+    padding:40px;
+    }
+</style>
+{% endblock %}
