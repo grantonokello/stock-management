@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, flash
+from flask import Flask, render_template, request, redirect, flash, url_for
 from datetime import datetime
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
@@ -44,8 +44,13 @@ class SELL:
 def layout():
     return render_template("layout.html")
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def selling():
+    if request.method == "POST":
+        item = request.form["number"]
+        number = request.form["item"]
+        sellingPrice = request.form["sellingPrice"]
+        return redirect(url_for("selling"), 304, Response="NOt Modified")
     return render_template("selling.html")
 
 @app.route("/login", methods=["GET", "POST"])
