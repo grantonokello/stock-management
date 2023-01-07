@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block body %}
+
+{{ super() }}
+<div class="container" id="table">
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Item</th>
+        <th scope="col">Number</th>
+        <th scope="col">buyingPrice</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr scope="row">
+        <td>id</td>
+         <td>Item</td>
+         <td>Number</td>
+         <td>Buying price</td>
+    </tr>
+    </tbody>
+</table>
+
+</div>
+
+
+<style>
+#table{
+padding:70px;
+}
+    table{
+    padding:10px;
+    border: 1px solid black;
+    border-radius:20px;
+    }
+</style>
+{% endblock %}
